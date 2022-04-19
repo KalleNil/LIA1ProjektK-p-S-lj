@@ -2,7 +2,65 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+  <p class="names"> <em>Kalle Nilsson, Sara Holmquist, Hampus Lindström, Fredrik Alm, Royne Reinholdsson</em></p> 
+  <button onclick="testApi()">test</button> 
+    <div class="content" id="annonser">
+        <button id="annonsKnapp" onclick="newAd()">ANNONS</button>
+        <form onsubmit="newAdForm(); return false">
+            <div id="annons" style="display: none">
+                <div>
+                    <label for="title" >Titel:
+                        <br>
+                        <input type="text" name="title" id="titleId" placeholder="Tavla" title="title" required>
+                    </label>
+                </div>
+                <div>
+                    <label for="Pris" >Pris:
+                        <br>
+                        <input type="text" name="price" id="priceId" placeholder="100kr" title="pris" required>
+                    </label>
+                </div>
+                <div>
+                    <label for="kategori" >Kategori:
+                        <br>
+                        <input type="text" name="kategori" id="kategoriId" placeholder="Tavlor" title="kategori" required>
+                    </label>
+                </div>
+                <div>
+                  <label for="beskrivning" >Beskrivning:
+                      <br>
+                      <input type="text" name="beskrivning" id="beskrivningId" placeholder="Produkten är i gott skick" title="kategori" required>
+                  </label>
+                </div>
+                <div>
+                  <label for="bild" >Bild:
+                      <br>
+                      <input type="text" name="bild" id="bildId" placeholder="http://www.bild.se" title="kategori" required>
+                  </label>
+                </div>
+               <!-- använder url istället
+                <p><input type="file"  accept="image/*" name="image" id="file" onchange="loadFile()" style="display: none;"></p>
+                <p><label for="file" style="cursor: pointer;">Upload Image</label></p>
+                <p><img id="output" width="200" /></p>
+                <br>
+                -->
+                <div>
+                    <input type="submit" value="Skicka">
+                </div>
+            </div>
+        </form>
+        <h3 class="description">Klicka på ett kort för mer information.</h3>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
